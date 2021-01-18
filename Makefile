@@ -8,11 +8,11 @@ endif
 all: mongo
 
 release:
-	docker build --no-cache=$(NOCACHE) -t oc.mongo . --build-arg TAG=latest
+	docker build --no-cache=$(NOCACHE) -t oc.mongo .
 	docker tag oc.mongo abcdesktopio/oc.mongo:latest
 
 dev:
-	docker build --no-cache=$(NOCACHE) -t oc.mongo . --build-arg TAG=dev
+	docker build --no-cache=$(NOCACHE) -t oc.mongo .
 	docker tag oc.mongo abcdesktopio/oc.mongo:dev
 
 push_release:

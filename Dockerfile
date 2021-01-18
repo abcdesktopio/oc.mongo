@@ -1,5 +1,3 @@
-ARG TAG=dev
-
-FROM mongo:$TAG
+FROM mongo
 
 ADD mongo-init.sh /docker-entrypoint-initdb.d/
