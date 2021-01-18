@@ -11,7 +11,7 @@ jobs:
       - name: Clone sources
         run: |
           rm -rf ..?* .[!.]* *
-          git -c http.extraheader="Authorization: basic ${{ secrets.TOKEN }}" clone "https://github.com/abcdesktopio/oc.nginx.git" .
+          git -c http.extraheader="Authorization: basic ${{ secrets.TOKEN }}" clone "https://github.com/abcdesktopio/oc.mongo.git" .
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
@@ -31,4 +31,4 @@ jobs:
           context: .
           push: true
           tags: |
-            abcdesktopio/oc.nginx:dev
+            abcdesktopio/oc.mongo:dev
