@@ -8,3 +8,5 @@ Please, read the public documentation web site:
 
 
 ## mongodb database
+
+This repository contains authentification script to allow pyos user access
