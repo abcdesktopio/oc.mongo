@@ -8,10 +8,8 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-      - name: Clone sources
-        run: |
-          rm -rf ..?* .[!.]* *
-          git -c http.extraheader="Authorization: basic ${{ secrets.TOKEN }}" clone "https://github.com/abcdesktopio/oc.mongo.git" .
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
